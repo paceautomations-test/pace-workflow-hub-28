@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import paceLogo from "@/assets/pace-logo.png";
 
 const navigation = {
   product: [
@@ -24,11 +25,8 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:gap-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-accent-foreground font-display font-bold text-lg">P</span>
-              </div>
-              <span className="font-display font-bold text-xl">PACE</span>
+            <div className="mb-4">
+              <img src={paceLogo} alt="Pace" className="h-8 w-auto brightness-0 invert" />
             </div>
             <p className="text-primary-foreground/70 text-sm max-w-xs">
               Enterprise-level workflow automation for growing businesses. Security-first, built to scale.
