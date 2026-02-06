@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import paceLogo from "@/assets/pace-logo.png";
 
 const navigation = [
   { name: "How It Works", href: "/how-it-works" },
@@ -23,13 +24,8 @@ export function Header() {
       <nav className="container-wide">
         <div className="flex h-16 items-center justify-between lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-accent-foreground font-display font-bold text-lg">P</span>
-              </div>
-              <span className="font-display font-bold text-xl text-foreground">PACE</span>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img src={paceLogo} alt="Pace" className="h-8 lg:h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
